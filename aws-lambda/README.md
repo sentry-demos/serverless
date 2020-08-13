@@ -12,7 +12,7 @@ Here you find examples of how to use Sentry SDKs to capture errors from code run
 # Prerequisites
 
 ## AWS Account
-  * https://portal.aws.amazon.com/billing/signup#/start 
+  * [AWS Signup](https://portal.aws.amazon.com/billing/signup#/start)
   * NOTE: The free tier should be able to cover these test runs (**YMMV**)
 
 ### Execution role for Lambda
@@ -26,10 +26,10 @@ Here you find examples of how to use Sentry SDKs to capture errors from code run
    * Permissions – AWSLambdaBasicExecutionRole.
    * Role name – lambda-role.
 * The AWSLambdaBasicExecutionRole policy has the permissions that the function needs to write logs to CloudWatch Logs.
-* Reference: https://docs.aws.amazon.com/lambda/latest/dg/lambda-nodejs.html
+* [Reference](https://docs.aws.amazon.com/lambda/latest/dg/lambda-nodejs.html)
 
 ## (Optional) Install AWS CLI
  * Under node's and python's README, we'll cover the steps of uploading our Lambda code via the Management console. You'd probably want to be using the AWS CLI if you'd be doing this often.
-   * Installation link (MacOS): https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-mac.html
-   * Lambda specific setup: https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-awscli.html
+   * [Installation link (MacOS)](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-mac.html)
+   * [Lambda specific setup](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-awscli.html)
 
