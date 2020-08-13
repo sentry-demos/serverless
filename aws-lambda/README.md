@@ -5,6 +5,10 @@ Here you find examples of how to use Sentry SDKs to capture errors from code run
 - [Node](node)
 - [Python](python)
 
+# If you dont like READMEs
+ * Feel free to jump right to this [WalkthroughVideo](https://drive.google.com/file/d/1mvHvJnSdZtU8-r_WfT-qoNvo-LKZJ9Rg/view?usp=sharing)
+
+
 # Prerequisites
 
 ## AWS Account
