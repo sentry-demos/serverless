@@ -28,9 +28,6 @@ func main() {
 	if err != nil {
 		log.Fatalf("sentry.Init: %s", err)
 	}
-	lambda.Start(HandleRequest)
-	// TODO try putting it after...
-
-	// EVAL prob put at end of 'main'
 	defer sentry.Flush(2 * time.Second)
+	lambda.Start(HandleRequest)
 }
