@@ -7,5 +7,5 @@ package-lock.json
 
 *.zip
 /aws-lambda/go/helloworld
-/aws-lambda/go/handled_exception
+/aws-lambda/go/handled_exception/main
 /aws-lambda/go/unhandled_exception/main
