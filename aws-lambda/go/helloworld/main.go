@@ -16,14 +16,15 @@ type Payload struct {
 
 func HandleRequest(ctx context.Context, payload Payload) (string, error) {
 	defer sentry.Flush(2 * time.Second)
-	fmt.Println("testing...")
+
 	sentry.CaptureMessage("serverless function (lambda) AWS")
+
 	return fmt.Sprintf("Program: %s!", payload.Name), nil
 }
 
 func main() {
 	err := sentry.Init(sentry.ClientOptions{
-		Dsn:   "https://879a3ddfdd5241b0b4f6fcf9011896ad@o87286.ingest.sentry.io/5426957",
+		Dsn:   "<your DSN>",
 		Debug: true,
 	})
 	if err != nil {

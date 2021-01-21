@@ -16,9 +16,9 @@ type Payload struct {
 
 func HandleRequest(ctx context.Context, payload Payload) (string, error) {
 	defer sentry.Flush(2 * time.Second)
+	defer sentry.Recover()
 
 	myList := make([]int, 2)
-
 	fmt.Println(myList[4])
 
 	return fmt.Sprintf("Program: %s!", payload.Name), nil
@@ -26,7 +26,7 @@ func HandleRequest(ctx context.Context, payload Payload) (string, error) {
 
 func main() {
 	err := sentry.Init(sentry.ClientOptions{
-		Dsn:   "https://879a3ddfdd5241b0b4f6fcf9011896ad@o87286.ingest.sentry.io/5426957",
+		Dsn:   "<your DSN>",
 		Debug: true,
 	})
 	if err != nil {
