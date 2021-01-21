@@ -15,7 +15,8 @@ type Payload struct {
 }
 
 func HandleRequest(ctx context.Context, payload Payload) (string, error) {
-	fmt.Println("this appears in the lambda log.....")
+	defer sentry.Flush(2 * time.Second)
+	fmt.Println("testing...")
 	sentry.CaptureMessage("serverless function (lambda) AWS")
 	return fmt.Sprintf("Program: %s!", payload.Name), nil
 }
@@ -28,6 +29,5 @@ func main() {
 	if err != nil {
 		log.Fatalf("sentry.Init: %s", err)
 	}
-	defer sentry.Flush(2 * time.Second)
 	lambda.Start(HandleRequest)
 }
