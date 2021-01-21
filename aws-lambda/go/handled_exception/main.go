@@ -26,7 +26,7 @@ func HandleRequest(ctx context.Context, payload Payload) (string, error) {
 
 func main() {
 	err := sentry.Init(sentry.ClientOptions{
-		Dsn:   "<your DSN>",
+		Dsn:   "https://879a3ddfdd5241b0b4f6fcf9011896ad@o87286.ingest.sentry.io/5426957",
 		Debug: true,
 	})
 	if err != nil {
