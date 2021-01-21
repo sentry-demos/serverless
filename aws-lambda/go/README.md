@@ -1,5 +1,7 @@
 # Steps to test Sentry SDK integration with Node Lambda function:
 
+[Demo Video](https://www.loom.com/share/e3625614df2f44f3bb96286ad7212f99)
+
 ## Create a development package
 1. Clone the git repo on your development machine.
 
