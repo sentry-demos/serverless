@@ -14,6 +14,8 @@ GOOS=linux go build -o bin/upload-image functions/upload-image/main.go && zip -r
 how about:  
 ```
 GOOS=linux go build main.go && zip function.zip main
+GOOS=linux go build main.go && zip -r function.zip main main.go
+
 ```
 3. Make it into a zip by `zip function.zip main`. Make sure your Runtime Setting's handler name matches the name of your executable (i.e. main).
 
