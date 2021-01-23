@@ -8,7 +8,7 @@
 2. Build your executable by running
 
 ```
-GOOS=linux go build main.go
+GOOS=linux GOARCH=amd64 go build main.go
 ```
 
 3. Create a zip
