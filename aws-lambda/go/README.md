@@ -1,4 +1,4 @@
-# Steps to test Sentry SDK integration with Node Lambda function:
+# Steps to test Sentry SDK integration with Go Lambda function:
 
 [Demo Video](https://www.loom.com/share/e3625614df2f44f3bb96286ad7212f99)
 
@@ -16,7 +16,7 @@ GOOS=linux go build main.go
 zip function.zip main
 
 // Include source code in zip to view source code in stacktrace.
-// Or, setup your Sentry<>Github integration instead.
+// Or, setup a Sentry<>Github integration docs.sentry.io/product/integrations/github/
 zip -r function.zip main main.go
 ```
 
