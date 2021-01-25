@@ -4,3 +4,8 @@ package-lock.json
 
 # Mac OS X
 .DS_Store
+
+*.zip
+/aws-lambda/go/helloworld
+/aws-lambda/go/handled_exception/main
+/aws-lambda/go/unhandled_exception/main
