@@ -6,6 +6,9 @@ package-lock.json
 .DS_Store
 
 *.zip
-/aws-lambda/go/helloworld
+/aws-lambda/go/helloworld/main
 /aws-lambda/go/handled_exception/main
 /aws-lambda/go/unhandled_exception/main
+/aws-lambda/go/sentry_context/main
+
+payload.cleaned.json
