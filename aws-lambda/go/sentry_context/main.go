@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"encoding/json"
 	"fmt"
 	"log"
 	"time"
@@ -18,6 +19,8 @@ func HandleRequest(ctx context.Context, webhook Webhook) (string, error) {
 	defer sentry.Flush(2 * time.Second)
 	// 1. add payload body of unknown size+ctonent as extra
 	// 2. send the FirehoseJSON object, see what happens
+
+	prettyPrint(webhook)
 
 	// sentry.ConfigureScope(func(scope *sentry.Scope) {
 	// 	scope.SetExtra("character.name", "Mighty Fighter")
@@ -56,4 +59,9 @@ type Webhook struct {
 	Device_application_stamp string                   `json:"device_application_stamp"`
 	Consent_state            map[string]interface{}   `json:"consent_state"`
 	Mpid                     string                   `json:"mpid"`
+}
+
+func prettyPrint(v interface{}) {
+	pp, _ := json.MarshalIndent(v, "", "  ")
+	fmt.Print(string(pp))
 }
