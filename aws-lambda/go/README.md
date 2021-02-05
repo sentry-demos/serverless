@@ -39,7 +39,7 @@ Common to any/all examples below, you'd need to __Configure test events__ for ea
 ## Troubleshooting
 Make sure your lambda Runtime Setting's handler name matches the name of your executable (i.e. main) or your function won't be found when you run the Test.
 
-Setting GOOS to linux ensures that the compiled executable is compatible with the Go runtime, even if you compile it in a non-Linux environment.
+Setting GOOS to linux and GOARCH to amd64 ensures that the compiled executable is compatible with the Go runtime, even if you compile it in a non-Linux environment.
 
 ## Additional Documentation
 https://github.com/getsentry/examples/tree/master/aws-lambda
