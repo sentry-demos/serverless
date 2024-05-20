@@ -1,2 +1,2 @@
 sentry_sdk==0.14.4
-requests==2.23.0
+requests==2.32.0
